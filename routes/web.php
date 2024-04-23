@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KasirController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.dashboard');
 });
+
+Route::get('icons', function () {
+    return view('icons');
+});
+
+Route::get('login',[KasirController::class,'login']);
+Route::post('login',[KasirController::class,'proses']);
+
+Route::get('dashboard/kasir',[KasirController::class,'index']);
