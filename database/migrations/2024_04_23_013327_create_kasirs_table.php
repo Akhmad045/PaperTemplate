@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('username',100);
             $table->string('password',255);
             $table->string('telepon',13);
-            $table->string('alamat',100);
             $table->enum('akses',['admin','kasir']);
+            $table->string('alamat',100);
             $table->timestamps();
         });
     }

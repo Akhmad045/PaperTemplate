@@ -41,7 +41,7 @@ Coded by www.creative-tim.com
             <div class="logo">
                 <a class="simple-text logo-mini">
                     <div class="logo-image-small">
-                        <img src="../assets/img/logo-small.png">
+                        <img src="/assets/img/logo-small.png">
                     </div>
                     <!-- <p>CT</p> -->
                 </a>
@@ -67,7 +67,7 @@ Coded by www.creative-tim.com
                         </a>
                     </li>
                     <li class="">
-                      <a href="{{ 'dashboard/kasir' }}">
+                      <a href="{{ url('dashboard/kasir') }}">
                           <i class="nc-icon nc-circle-10"></i>
                           <p>Data Kasir</p>
                       </a>

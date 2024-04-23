@@ -16,13 +16,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('pages.dashboard');
-});
+})->middleware('auth');
 
 Route::get('icons', function () {
     return view('icons');
 });
 
-Route::get('login',[KasirController::class,'login']);
+Route::get('login',[KasirController::class,'login'])->name('login');
 Route::post('login',[KasirController::class,'proses']);
 
 Route::get('dashboard/kasir',[KasirController::class,'index']);
+Route::get('dashboard/kasir/tambah',[KasirController::class,'tambah']);
+Route::post('dashboard/kasir/tambah',[KasirController::class,'proses_tambah']);

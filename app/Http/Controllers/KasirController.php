@@ -31,4 +31,20 @@ class KasirController extends Controller
         return view('kasir.index',['data' => $kasir]);
     }
     
+    public function tambah () {
+        return view('kasir.tambah');
+    }
+
+    public function proses_tambah (Request $request) {
+        $valid = $request->validate([
+            'nama' => 'required|max:255',
+            'username' => 'required|unique:kasirs|max:255',
+            'password' => 'required|max:100',
+            'telepon' => 'required|max:13',
+            'alamat' => 'required|max:255',
+        ]);
+        $k = new Kasir();
+        $k->create($request->all());
+        return redirect('dashboard/kasir');
+    }
 }
