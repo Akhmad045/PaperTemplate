@@ -2,6 +2,16 @@
 
 @section('isi')
     <div class="content">
+        @if (session('message'))
+            <script>
+                Swal.fire({
+                    icon: "success",
+                    title: "Congrats...",
+                    text: "{{ session('message') }}",
+
+                });
+            </script>
+        @endif
         <div class="row">
             <div class="col">
                 <div class="card card-user">
@@ -15,20 +25,22 @@
                                 <div class="col-md-5 pr-1">
                                     <div class="form-group">
                                         <label>Nama</label>
-                                        <input type="text" class="form-control" placeholder="Masukan nama"
-                                            name="nama" required autofocus>
+                                        <input type="text" class="form-control" placeholder="Masukan nama" name="nama"
+                                            required autofocus>
                                     </div>
                                 </div>
                                 <div class="col-md-3 px-1">
                                     <div class="form-group">
                                         <label>Username</label>
-                                        <input type="text" class="form-control" placeholder="Masukan username" name="username">
+                                        <input type="text" class="form-control" placeholder="Masukan username"
+                                            name="username">
                                     </div>
                                 </div>
                                 <div class="col-md-4 pl-1">
                                     <div class="form-group">
                                         <label for="password">Password</label>
-                                        <input type="password" class="form-control" placeholder="Masukan password" name="password">
+                                        <input type="password" class="form-control" placeholder="Masukan password"
+                                            name="password">
                                     </div>
                                 </div>
                             </div>
@@ -36,7 +48,8 @@
                                 <div class="col-md-6 pr-1">
                                     <div class="form-group">
                                         <label>Telepon</label>
-                                        <input type="number" class="form-control" placeholder="Masukan telepon" name="telepon">
+                                        <input type="number" class="form-control" placeholder="Masukan telepon"
+                                            name="telepon">
                                     </div>
                                 </div>
                                 <div class="col-md-6 pl-1">
@@ -50,7 +63,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12"> 
+                                <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Alamat</label>
                                         <textarea class="form-control textarea" name="alamat" id="alamat"></textarea>
@@ -68,4 +81,5 @@
             </div>
         </div>
     </div>
+    
 @endsection

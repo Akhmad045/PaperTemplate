@@ -73,9 +73,9 @@ Coded by www.creative-tim.com
                       </a>
                   </li>
                   <li class="">
-                    <a href="{{ 'dashboard/buku' }}">
-                        <i class="nc-icon nc-book-bookmark"></i>
-                        <p>Buku</p>
+                    <a href="{{url('dashboard/distributor')}}">
+                        <i class="nc-icon nc-box"></i>
+                        <p>Distributor</p>
                     </a>
                 </li>
                 </ul>
@@ -121,6 +121,7 @@ Coded by www.creative-tim.com
     </div>
 
     <!--   Core JS Files   -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/assets/js/core/jquery.min.js"></script>
     <script src="/assets/js/core/popper.min.js"></script>
     <script src="/assets/js/core/bootstrap.min.js"></script>
